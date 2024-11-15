@@ -1,4 +1,13 @@
-1: https://arxiv.org/pdf/1801.06054
+1-4D-Dirac-in-5D: https://arxiv.org/pdf/1801.06054
 
-2: https://arxiv.org/pdf/2309.14813
+2-ConstraintTensors: https://arxiv.org/pdf/2309.14813
+
+3-Wesson-Where-is-5D: https://cpb-us-w2.wpmucdn.com/wp.towson.edu/dist/d/714/files/2019/01/whereisthe5thdimension-1v4vnvf.pdf
+
+4-Wesson-Status-of-5D-Gravity: https://arxiv.org/pdf/1412.6136
+
+5-Form-Factors-InYangMills-From-Unitarity-and-Spinor-Helicity-In-6D: https://arxiv.org/pdf/1910.04772
+
+6-Higher-spin-YangMills-Amplitudes-Self-Duality: https://arxiv.org/pdf/2210.07130v2
+
 
