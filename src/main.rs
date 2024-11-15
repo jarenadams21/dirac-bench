@@ -282,7 +282,7 @@ fn main() {
     let v_modified = &v + &rbm_output_resized.mapv(|val| val * 1e-3); // Scaling factor for RBM output
 
     // Time Evolution Loop
-    let num_steps = 1000; // Number of time steps
+    let num_steps = 10; // Number of time steps
 
     for _step in 0..num_steps {
         // Initialize arrays to store spatial derivatives of the wavefunction components
