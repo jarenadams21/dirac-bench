@@ -1,0 +1,154 @@
+Derivation and Verification of the Master Equation in the Rust Simulation
+
+Introduction
+
+```
+The provided Rust code simulates the time evolution of a Dirac spinor in one spatial dimension,
+ incorporating gravitational potential, mass loss due to Hawking radiation,
+  and modifications from a Restricted Boltzmann Machine (RBM).
+ The goal is to derive the master equation governing this simulation and verify its validity.
+```
+
+1. The Dirac Equation in 1+1 Dimensions
+
+In natural units where ￼, the Dirac equation in one spatial dimension (1+1 dimensions) is given by:
+where ￼ is a two-component spinor, and ￼ is the Hamiltonian operator defined as:
+
+Here:
+	•	￼ and ￼ are the Dirac matrices, represented using Pauli matrices in 1+1 dimensions.
+	•	￼ is the mass of the particle, which is time-dependent due to Hawking radiation.
+	•	￼ is the potential energy, including gravitational effects and modifications from the RBM.
+
+Pauli Matrices:
+
+￼
+
+2. Deriving the Master Equation
+
+2.1. Writing the Hamiltonian
+
+Substituting the Pauli matrices into the Hamiltonian:
+
+￼
+
+2.2. Expanding the Dirac Equation
+
+Let ￼ have components:
+
+￼
+
+Substituting ￼ and ￼ into the Dirac equation:
+
+￼
+
+2.3. Writing Component Equations
+
+Expanding the matrix operations:
+	•	First component (￼):
+￼
+Given ￼ and ￼, ￼:
+￼
+Simplify:
+￼
+	•	Second component (￼):
+￼
+Given ￼, ￼, ￼:
+￼
+Simplify:
+￼
+
+3. The Master Equation
+
+Combining the component equations, the master equation governing the simulation is:
+
+\[
+\begin{cases}
+i\frac{\partial \psi_1}{\partial t} = -i \frac{\partial \psi_2}{\partial x} + \left( V(x) + m \right) \psi_1 \\
+i\frac{\partial \psi_2}{\partial t} = -i \frac{\partial \psi_1}{\partial x} + \left( V(x) - m \right) \psi_2
+\end{cases}
+\]
+
+This set of coupled partial differential equations describes the time evolution of the Dirac spinor components
+ ￼ and ￼ under the influence of a potential ￼ and a time-dependent mass ￼.
+
+4. Implementation in the Rust Code
+
+4.1. Discretization and Time Evolution
+	•	Spatial Derivatives:
+The code computes spatial derivatives using central finite differences:
+￼
+	•	Time Integration:
+The time evolution uses an explicit Euler method:
+￼
+
+4.2. Code Equations Correspondence
+
+In the code, the Hamiltonian’s action on ￼ is computed as:
+	•	First component (￼):
+
+h_psi1 = -i * dpsi_dx2[i] + (v_i + m) * psi.component1[i];
+
+Corresponds to:
+￼
+
+	•	Second component (￼):
+
+h_psi2 = -i * dpsi_dx1[i] + (v_i - m) * psi.component2[i];
+
+Corresponds to:
+￼
+
+4.3. Time Update Step
+
+The code updates the spinor components:
+	•	First component:
+
+new_component1[i] = psi.component1[i] - i * h_psi1 * DT;
+
+Corresponds to:
+￼
+
+	•	Second component:
+
+new_component2[i] = psi.component2[i] - i * h_psi2 * DT;
+
+Corresponds to:
+￼
+
+5. Verification of Validity
+
+5.1. Consistency with the Dirac Equation
+
+The code correctly implements the discretized form of the master equation derived earlier.
+ Each term in the code corresponds to the respective term in the master equation:
+	•	Spatial Derivatives: The use of central finite differences approximates the spatial derivatives
+     ￼ accurately for sufficiently small ￼.
+	•	Hamiltonian Terms: The mass ￼ and potential ￼ are correctly incorporated into the Hamiltonian ￼.
+
+5.2. Time-Dependent Mass ￼
+
+The mass ￼ decreases over time to simulate Hawking radiation:
+
+m -= mass_loss_rate * DT;
+
+This time dependence is consistent with the assumption of a mass loss rate, and ￼ is appropriately updated in each time step.
+
+5.3. Potential Energy Modification
+
+The potential ￼ is modified using the output from the RBM:
+
+let v_modified = &v + &rbm_output_resized;
+
+This addition reflects external influences or corrections to the potential energy, aligning with the physical
+ scenario where the potential can be affected by additional factors.
+
+Conclusion
+
+The master equation governing the Rust simulation is the time-dependent Dirac equation in 1+1 dimensions
+ with a time-dependent mass ￼ and a modified potential ￼:
+
+The code implements this equation using finite difference methods for spatial derivatives and an explicit Euler method for time integration. The inclusion of mass loss and potential modifications aims to be consistent with the physical models of Hawking radiation and external perturbations.
+
+References
+	•	Peskin, M. E., & Schroeder, D. V. (1995). An Introduction to Quantum Field Theory.
+	•	Thaller, B. (1992). The Dirac Equation.
