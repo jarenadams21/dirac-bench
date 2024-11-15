@@ -10,4 +10,43 @@
 
 6-Higher-spin-YangMills-Amplitudes-Self-Duality: https://arxiv.org/pdf/2210.07130v2
 
+7-5D-Langevin-Atomic-Nuclei-Fission: https://arxiv.org/pdf/2310.19466
+
+8-Klein-5D-Intro: https://arxiv.org/pdf/1309.4113
+
+9-Quasi-2D Turbulence: https://arxiv.org/html/2411.08633v1
+
+10-Modeling-5D-With-Scalars-And-Gravity: https://arxiv.org/pdf/hep-th/9909134
+
+11-5D-And-Back: https://arxiv.org/pdf/hep-th/0508134
+
+12-Bubbling-Sensitive-Dirac-System: https://arxiv.org/html/2411.09348v1
+
+13-Wesson-5D-General-Relativity-AND-QUANTUM: https://arxiv.org/pdf/1102.0801
+
+14-Long-Range-Scalars-In-5D-General-Relativity: https://arxiv.org/abs/2007.03394
+
+15-Deformity-of-Rotating-Black-Holes-In-5D: https://arxiv.org/abs/2106.00649
+
+16- Kaluza-Klein: https://arxiv.org/pdf/2403.17278
+
+17-KK-Graviton-Freeze-and-Big-Bang-Nucleosynthesis: https://arxiv.org/pdf/2407.07529
+
+18-KK-In-Perspective: https://arxiv.org/pdf/hep-th/9410046
+
+19-Large-Extra-Dimensions-At-Linear-Colliders: https://arxiv.org/pdf/hep-ph/0004053
+
+20-A-New-Perspective-On-KK-Theories: https://arxiv.org/pdf/2404.05302
+
+21-Fermions-In-Fuzzy-KK-Spheres: https://arxiv.org/abs/2409.06668
+
+22-Global-Stability-Of-KK-MODEL: https://arxiv.org/abs/2307.15267
+
+23-Dyonic-Wormholes-In-5D: https://arxiv.org/pdf/gr-qc/0009042
+
+24-Enveloping-5D-Malcev-Algebras: https://arxiv.org/pdf/1008.1994
+
+25-Symmetric-Mass-Generation-Chiral-Fermion: https://arxiv.org/abs/2202.12355
+
+26-Ahmed-Minkowski-Space-5D-Vacuum-Defect-Wormhole: https://arxiv.org/abs/2308.11938
 
